@@ -1,4 +1,21 @@
 import React, { Component } from 'react';
+import { bounce, fadeInLeft, bounceInDown } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
+
+const styles = {
+    bounce: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(bounce, 'bounce')
+    },
+    fadeInLeft: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(fadeInLeft, 'fadeInLeft')
+    },
+    bounceInDown: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(bounceInDown, 'bounceInDown')
+    }
+}
 
 class Timer extends Component {
     constructor(props) {
@@ -35,15 +52,20 @@ class Timer extends Component {
                 <div class="container">
                     <div className="row row-content align-items-center animate__animated animate__fadeInLeft">
                         <div className="col-sm-12">
-                            <h2 className="text-center">We are getting married <b>{this.props.eventDate}</b></h2>
-                            <div className="containerCD">
-                                <div className="countdown">
-                                    <div id="day">{this.leadingZero(this.state.days)}</div>
-                                    <div id="hour">{this.leadingZero(this.state.hours)}</div>
-                                    <div id="minute">{this.leadingZero(this.state.minutes)}</div>
-                                    <div id="second">{this.leadingZero(this.state.seconds)}</div>
+                            <StyleRoot>
+                                <div style={styles.fadeInLeft}>
+                                    <h2 className="text-center">We are getting married <b>{this.props.eventDate}</b></h2>
+
+                                    <div className="containerCD">
+                                        <div className="countdown">
+                                            <div id="day">{this.leadingZero(this.state.days)}</div>
+                                            <div id="hour">{this.leadingZero(this.state.hours)}</div>
+                                            <div id="minute">{this.leadingZero(this.state.minutes)}</div>
+                                            <div id="second">{this.leadingZero(this.state.seconds)}</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </StyleRoot>
                         </div>
                     </div>
                 </div>
