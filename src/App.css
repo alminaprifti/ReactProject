@@ -128,6 +128,15 @@ header h2 {
   overflow: hidden;
 }
 
+.divParallax {
+  width: 100%;
+  /*background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/foto6.jpg");*/
+  background-size: cover;
+  background-position: top left;
+  height: 100%;
+  object-fit: cover;
+}
+
 .parallax-slide {
   position: relative;
   height: 100vh;
@@ -183,6 +192,7 @@ header h2 {
     /* necessary for iOS! */
   }
 }
+
 
 .content {
   position: absolute;
