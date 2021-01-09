@@ -17,7 +17,7 @@ export const PARALLAXES = [
                     "/assets/images/our story.jpg"
             },
             dimensions: { height: 480 },
-            speed: 500,
+            speed: 190,
             text: "OUR STORY",
             styleName: "fa-camera-retro"
         },
@@ -46,7 +46,7 @@ export const PARALLAXES = [
                     "/assets/images/slide-2.jpg"
             },
             dimensions: { height: 580 },
-            speed: 500,
+            speed: 190,
             text: "SHE SAID YES",
             styleName: "fa-heartbeat"
         },
@@ -72,7 +72,7 @@ export const PARALLAXES = [
                     "/assets/images/slide-1.jpg"
             },
             dimensions: { height: 580 },
-            speed: 500,
+            speed: 190,
             text: "BEST DAY EVER ... ",
             styleName: "fa-hourglass-half"
         },
@@ -99,7 +99,7 @@ export const PARALLAXES = [
                     "/assets/images/slide-3.jpg"
             },
             dimensions: { height: 580 },
-            speed: 500,
+            speed: 190,
             text: "CELEBRATE WITH US ... ",
             styleName: "fa-users"
         },

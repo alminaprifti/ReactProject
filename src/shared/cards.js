@@ -106,10 +106,9 @@ export const CARDS = [
         name: "Hearts Wedding Guest Book",
         image: "/assets/images/heart weddings.webp",
         shopComponent: true,
-        text: ` Notebook · Guest Book · Wedding
-        Alternative Guest Book Drop Box We know how important this day is for you
-        and how important it is to make everything perfect. How important every
-        detail is. You definitely want to keep every moment of the day, not to miss
+        text: ` We know how important this day is for you
+        and how important it is to make everything perfect. 
+        You definitely want to keep every moment of the day, not to miss
         a minute. Remember the emotions of your loved ones and friends. Our
         alternative guest book will decorate your holiday and give your loved ones
         an opportunity to leave their wishes on wooden hearts.`,
