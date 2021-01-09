@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardImgOverlay, Button } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardFooter, CardImgOverlay, Button } from 'reactstrap';
 
 export function RenderCardHomeComponent({ item }) {
     return (
@@ -55,4 +55,35 @@ export function RenderCardWhenWhereComponent({ item }) {
             </Card>
         </React.Fragment>
     );
+}
+
+export const RenderFlipCard = (props) => {
+    const holdTempClass = "flipCard ";
+    return (
+        <div className={holdTempClass + props.name}>
+            <div className="flipContent">
+                <div className="front">
+                    <CardImg src={props.item.image} alt={props.item.name} className="imgFlipCard" />
+                    <p className="card-title pt-0"> {props.item.name}</p>
+                </div>
+                <div className="back bg-white">
+                    <CardTitle tag="p" className="card-title text-center">{props.item.name}</CardTitle>
+                    <CardText className="text-center px-3" tag="p">
+                        {props.item.text}
+                    </CardText>
+                    <div className="row py-1">
+                        <div className="col-sm-6 d-flex align-items-stretch py-2">
+                            <CardText className="text-center px-3">
+                                Price <b>{props.item.textPrice}</b>
+                            </CardText>
+                        </div>
+                        <div className="col-sm-6 d-flex align-items-stretch">
+                            <Button variant="secondary" className="btn btn-danger" ><i className="fa fa-cart" /> {props.item.button}
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }

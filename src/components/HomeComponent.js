@@ -11,7 +11,7 @@ function Home({ carousel, cards }) {
                 <div className="text-center mt-5 text-white">
                     <h1 className="display-4">
                         OUR / WEEDING / GALLERY </h1>
-                    <p className="font-italic mb-3">Two of Us</p>
+                    <p className="font-italic mb-3"><h2>Two of Us</h2></p>
                 </div>
                 <div className="row">
                     <CardGroup>

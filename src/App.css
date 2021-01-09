@@ -1,5 +1,7 @@
+@import "https://fonts.googleapis.com/css?family=Leckerli+One";
 body {
-  font-family: "Times New Roman", Times, red-serif;
+  font-family: "Leckerli One";
+  /*, "Times New Roman", Times, red-serif*/
   overflow-x: hidden;
   margin: 0;
   border: 0;
@@ -192,7 +194,6 @@ header h2 {
     /* necessary for iOS! */
   }
 }
-
 
 .content {
   position: absolute;
@@ -852,10 +853,6 @@ section .section-title {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-.card-text {
-  height: 100px;
-}
-
 .card::before, .card::after {
   position: absolute;
   top: 0;
@@ -1097,3 +1094,77 @@ ul li a:hover {
   font-size: 55px;
   color: white;
 }*/
+
+/*Card root style */
+
+.flipCard {
+  /*position: block;
+  width: 300px;*/
+  height: auto;
+  perspective: 500px;
+}
+
+.imgFlipCard {
+  /*width: 300px;*/
+  height: 300px;
+  object-fit: cover;
+}
+
+.flipContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.hover-on .flipContent {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.front, .back {
+  width: 100%;
+  background: white;
+  color: #00a896;
+  text-align: center;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front {
+  position: relative;
+  /*-webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);*/
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.back {
+  min-height: 335px;
+  color: white;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.color-1 .flipCard .front {
+  color: #05668d;
+}
+
+.color-1 .flipCard .back {
+  color: black;
+}
+
+.flipContent .card-title {
+  /*color: #007b5e !important;*/
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, rgba(240, 182, 175, 0.8) 0, #d68b82 100%);
+  font-size: 25px;
+}
+
+.flipContent p {
+  font-family: "Times New Roman", Times, red-serif;
+}

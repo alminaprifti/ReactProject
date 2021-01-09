@@ -4,6 +4,7 @@ import Footer from "./FooterComponent";
 import Home from './HomeComponent';
 import OurStory from './OurStoryComponent';
 import WhenWhere from './WhenWhereComponent';
+import Shop from './ShopComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { CARDS } from "../shared/cards";
@@ -46,6 +47,14 @@ class Main extends Component {
             );
         };
 
+        const ShopPage = () => {
+            return (
+                <Shop
+                    cards={this.state.cards.filter(card => card.shopComponent)}
+                />
+            );
+        };
+
         return (
             <div>
                 <Header />
@@ -53,6 +62,7 @@ class Main extends Component {
                     <Route exact path='/home' component={HomePage} />
                     <Route exact path='/ourstory' component={OurStoryPage} />
                     <Route exact path='/whenwhere' component={WhenWherePage} />
+                    <Route exact path='/shop' component={ShopPage} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
                 </Switch>

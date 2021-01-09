@@ -86,5 +86,86 @@ export const CARDS = [
         image: "/assets/images/foto 12.png",
         whenwhereComponent: true,
         text: "Most likely to make everyone laugh hysterically during his toast"
+    },
+    {
+        id: 12,
+        name: "Round Metal Wedding",
+        image: "/assets/images/shopping ballons.webp",
+        shopComponent: true,
+        text: `1 Qty: 1 Round Metal Wedding Arch What You Get: (2x) Curved Base Legs (3x)
+        44" Length Curved Poles (3x) 45" Length Curved Poles 1 Pack of Accessories:
+        Each pack has 24 Washers, 12 Screws, 12 Wing Nuts Assembly Diagram Material:
+        Lightweight Metal Color: Gold Overall Height : 91" (7.5 Ft) Overall Width
+        Diameter: 89.5" Capacity: 100 Lbs Order is for Backdrop Stand only. Balloons
+        and other accessories are not included.`,
+        textPrice: `$ 39.99`,
+        button: "Add to cart"
+    },
+    {
+        id: 13,
+        name: "Hearts Wedding Guest Book",
+        image: "/assets/images/heart weddings.webp",
+        shopComponent: true,
+        text: ` Notebook · Guest Book · Wedding
+        Alternative Guest Book Drop Box We know how important this day is for you
+        and how important it is to make everything perfect. How important every
+        detail is. You definitely want to keep every moment of the day, not to miss
+        a minute. Remember the emotions of your loved ones and friends. Our
+        alternative guest book will decorate your holiday and give your loved ones
+        an opportunity to leave their wishes on wooden hearts.`,
+        textPrice: `$ 39.99`,
+        button: "Add to cart"
+    },
+    {
+        id: 14,
+        name: "WEDDING PHOTOGRAPHY",
+        image: "/assets/images/wedding Photografi.jpg",
+        shopComponent: true,
+        text: ` This new bridal gowns 2020 can be chosen from size 2 to 16W
+        and 40 colors,Wedding Dresses 2020 Tulle Sweep Train Mermaid Long Sleeve
+        V-Neck Covered Button With App, the prom dress is very popular among our
+        customers across the globe, A size customisation service is also available,
+        100% made-to-order by professional tailors, Easy Returns.`,
+        textPrice: `$ 119.99`,
+        button: "Add to cart"
+    },
+    {
+        id: 15,
+        name: "PHOTO FRAME",
+        image: "/assets/images/photo frame.jpg",
+        shopComponent: true,
+        text: ` This new bridal gowns 2020 can be chosen from size 2 to 16W
+        and 40 colors,Wedding Dresses 2020 Tulle Sweep Train Mermaid Long Sleeve
+        V-Neck Covered Button With App, the prom dress is very popular among our
+        customers across the globe, A size customisation service is also available,
+        100% made-to-order by professional tailors, Easy Returns.`,
+        textPrice: `$ 19.99`,
+        button: "Add to cart"
+    },
+    {
+        id: 16,
+        name: "WHITE VEIL",
+        image: "/assets/images/white veil.jpg",
+        shopComponent: true,
+        text: ` This new bridal gowns 2020 can be chosen from size 2 to 16W
+        and 40 colors,Wedding Dresses 2020 Tulle Sweep Train Mermaid Long Sleeve
+        V-Neck Covered Button With App, the prom dress is very popular among our
+        customers across the globe, A size customisation service is also available,
+        100% made-to-order by professional tailors, Easy Returns.`,
+        textPrice: `$ 149.99`,
+        button: "Add to cart"
+    },
+    {
+        id: 17,
+        name: "INVITATIONS",
+        image: "/assets/images/invitation.jpg",
+        shopComponent: true,
+        text: ` This new bridal gowns 2020 can be chosen from size 2 to 16W
+        and 40 colors,Wedding Dresses 2020 Tulle Sweep Train Mermaid Long Sleeve
+        V-Neck Covered Button With App, the prom dress is very popular among our
+        customers across the globe, A size customisation service is also available,
+        100% made-to-order by professional tailors, Easy Returns.`,
+        textPrice: `$ 19.99`,
+        button: "Add to cart"
     }
 ]
