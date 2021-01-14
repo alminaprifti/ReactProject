@@ -1,66 +1,156 @@
 export const CARDS = [
     {
         id: 0,
-        name: "",
+        name: "Firenze, Italy",
         image: "/assets/images/foto 1.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Firenze, Italy!",
+        date: "2018-10-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 0,
+            rating: 5,
+            location: "Firenze, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2018-10-25T16:30Z"
+        }
     },
     {
         id: 1,
         name: "",
         image: "/assets/images/foto 2.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Rome, Italy!",
+        date: "2019-10-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 1,
+            rating: 5,
+            location: "Rome, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2019-10-25T16:30Z"
+        }
     },
     {
         id: 2,
         name: "",
         image: "/assets/images/foto 3.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Venice, Italy!",
+        date: "2019-06-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 2,
+            rating: 5,
+            location: "Venice, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2019-06-25T16:30Z"
+        }
     },
     {
         id: 3,
         name: "",
         image: "/assets/images/foto 4.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Florence, Italy!",
+        date: "2017-06-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 3,
+            rating: 5,
+            location: "Florence, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2017-06-25T16:30Z"
+        }
     },
     {
         id: 4,
         name: "",
         image: "/assets/images/foto 5.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Cagliari - Sardignia, Italy!",
+        date: "2017-06-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 4,
+            rating: 5,
+            location: "Cagliari - Sardignia, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2017-06-25T16:30Z"
+        }
     },
     {
         id: 5,
         name: "",
         image: "/assets/images/foto6.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Olbia - Sardignia, Italy!",
+        date: "2017-06-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 5,
+            rating: 5,
+            location: "Olbia - Sardignia, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2017-06-25T16:30Z"
+        }
     },
     {
         id: 6,
         name: "",
         image: "/assets/images/foto 7.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Costa Paradiso - Sardignia, Italy!",
+        date: "2017-06-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 6,
+            rating: 5,
+            location: "Costa Paradiso - Sardignia, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2017-06-25T16:30Z"
+        }
     },
     {
         id: 7,
         name: "",
         image: "/assets/images/foto10.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Rome, Italy!",
+        date: "2015-06-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 7,
+            rating: 5,
+            location: "Rome, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2015-06-25T16:30Z"
+        }
     },
     {
         id: 8,
         name: "",
         image: "/assets/images/foto9.jpg",
         homeComponent: true,
-        button: "detail"
+        button: "detail",
+        location: "Lucas, Italy!",
+        date: "2015-06-25T16:30Z",
+        detail: {
+            id: 0,
+            homeComponentId: 8,
+            rating: 5,
+            location: "Lucas, Italy!",
+            text: "Enjoy beautiiful weather of Italy",
+            date: "2015-06-25T16:30Z"
+        }
     },
     {
         id: 9,

@@ -1,18 +1,74 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardFooter, CardImgOverlay, Button } from 'reactstrap';
+import React, { Component } from 'react';
+import {
+    Card, CardImg, CardText, CardBody, CardTitle, CardFooter, CardImgOverlay, Button,
+    Modal, ModalHeader, ModalBody
+} from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { RenderMediaHomeComponent } from "./MediaComponent";
 
-export function RenderCardHomeComponent({ item }) {
+export class RenderCardHomeComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isModalOpen: false
+        };
+
+        this.toggleModal = this.toggleModal.bind(this);
+    }
+
+    toggleModal() {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
+        });
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <Button variant="secondary" outline onClick={this.toggleModal} style={{ padding: "0px" }}>
+                    <Card className="cardHeight">
+                        {/*<Link to={`/home/${this.props.item.id}`}>*/}
+                        <CardImg src={this.props.item.image} alt={this.props.item.name} className="card-img-top cardHeight" />
+                        <CardImgOverlay className="content-overlay">
+                            <CardText className="text-right">
+                                {/* <Button variant="secondary" outline onClick={this.toggleModal}>
+                                    <i className="fa fa-commenting" /> {this.props.item.button}
+                                </Button>
+                                 */}
+                                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}
+                                    size="lg"
+                                    aria-labelledby="vertical-alignment-helper"
+                                    centered>
+                                    <ModalHeader toggle={this.toggleModal}>
+                                        <h2>{this.props.item.location}</h2>
+                                    </ModalHeader>
+                                    <ModalBody>
+                                        <RenderMediaHomeComponent media={this.props.item} />
+                                    </ModalBody>
+                                </Modal>
+                            </CardText>
+                        </CardImgOverlay>
+                        {/* </Link> */}
+                    </Card>
+                </Button>
+            </React.Fragment>
+        );
+    }
+}
+
+export function RenderCardHomeDetailComponent({ card }) {
     return (
-        <React.Fragment>
-            <Card className="cardHeight">
-                <CardImg src={item.image} alt={item.name} className="card-img-top" />
-                <CardImgOverlay className="content-overlay">
-                    <CardText className="text-right">
-                        <Button variant="secondary" ><i className="fa fa-commenting" /> {item.button} </Button>
-                    </CardText>
-                </CardImgOverlay>
+        <div className="col-md-5 m-1">
+            <Card>
+                <CardImg top src={card.image} alt={card.name} />
+                <CardBody>
+                    <CardText><h2>{card.detail.location}</h2></CardText>
+                    <p>
+                        {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(card.detail.date)))}
+                    </p>
+                </CardBody>
             </Card>
-        </React.Fragment>
+        </div>
     );
 }
 
