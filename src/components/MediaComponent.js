@@ -1,9 +1,9 @@
 import React from 'react';
 import { Media } from 'reactstrap';
 
-export function RenderMediaHomeComponent({ media }) {
+export function RenderMediaHomeComponent({ media, onClick }) {
     return (
-        <Media>
+        <Media onClick={onClick}>
             <Media left href="#">
                 <Media object src={media.image} alt={media.name} />
             </Media>

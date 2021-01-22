@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { RenderMediaHomeComponent } from "./MediaComponent";
+import { FadeTransform } from 'react-animation-components';
 
 export class RenderCardHomeComponent extends Component {
     constructor(props) {
@@ -14,11 +15,18 @@ export class RenderCardHomeComponent extends Component {
         };
 
         this.toggleModal = this.toggleModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     toggleModal() {
         this.setState({
             isModalOpen: !this.state.isModalOpen
+        });
+    }
+
+    closeModal() {
+        this.setState({
+            isModalOpen: false
         });
     }
 
@@ -43,7 +51,8 @@ export class RenderCardHomeComponent extends Component {
                                         <h2>{this.props.item.location}</h2>
                                     </ModalHeader>
                                     <ModalBody>
-                                        <RenderMediaHomeComponent media={this.props.item} />
+                                        {/* <RenderMediaHomeComponent media={this.props.item} onClick={this.closeModal}/> */}
+                                        <RenderFullCardHomeComponent card={this.props.item} onClick={this.closeModal} />
                                     </ModalBody>
                                 </Modal>
                             </CardText>
@@ -143,3 +152,24 @@ export const RenderFlipCard = (props) => {
         </div>
     )
 }
+
+export function RenderFullCardHomeComponent({ card, onClick }) {
+    return (
+        <FadeTransform
+            in
+            transformProps={{
+                enterTransform: "rotate(360deg)",
+                exitTransform: 'scale(0.5) translateY(-50%) rotate(180deg)'
+            }}>
+            <Card className="cardFull" onClick={onClick}>
+                <CardImg width="100%" src={card.image} alt={card.name} />
+                <CardImgOverlay>
+                    <CardTitle>
+                        {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(card.detail.date)))}
+                    </CardTitle>
+                </CardImgOverlay>
+            </Card>
+        </FadeTransform>
+
+    );
+};

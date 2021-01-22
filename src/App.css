@@ -415,10 +415,6 @@ section .section-title {
   background: #ffffff;
 }
 
-.card:hover {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-}
-
 .cardHeight {
   min-height: 350px;
 }
@@ -850,7 +846,23 @@ section .section-title {
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  /*box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);*/
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+
+.cardFull .card-img-overlay .card-title {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cardFull:hover {
+  transform: none!important;
+  box-shadow: none;
 }
 
 .card::before, .card::after {
@@ -874,9 +886,6 @@ section .section-title {
   transform-origin: right bottom;
 }
 
-.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
-  transform: scale3d(1, 1, 1);
-}
 
 /*====Cart shopping===*/
 
@@ -1170,19 +1179,21 @@ ul li a:hover {
 }
 
 .vertical-alignment-helper {
-  display:table;
+  display: table;
   height: 100%;
   width: 100%;
 }
+
 .vertical-align-center {
   /* To center vertically */
   display: table-cell;
   vertical-align: middle;
 }
+
 .modal-content {
   /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
-  width:inherit;
-  height:inherit;
+  width: inherit;
+  height: inherit;
   /* To center horizontally */
   margin: 0 auto;
 }
