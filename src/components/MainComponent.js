@@ -7,27 +7,25 @@ import OurStory from './OurStoryComponent';
 import WhenWhere from './WhenWhereComponent';
 import Shop from './ShopComponent';
 import Contact from './ContactComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { CARDS } from "../shared/cards";
-import { CAROUSEL } from "../shared/carousel";
-import { PARALLAXES } from "../shared/parallax";
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+    return {
+        cards: state.cards,
+        carousel: state.carousel,
+        parallaxes: state.parallaxes
+    };
+};
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            cards: CARDS,
-            carousel: CAROUSEL,
-            parallaxes: PARALLAXES
-        };
-    }
 
     render() {
         const HomePage = () => {
             return (
                 <Home
-                    carousel={this.state.carousel.filter(itemCarousel => itemCarousel.homeComponent)}
-                    cards={this.state.cards.filter(card => card.homeComponent)}
+                    carousel={this.props.carousel.filter(itemCarousel => itemCarousel.homeComponent)}
+                    cards={this.props.cards.filter(card => card.homeComponent)}
                 />
             );
         };
@@ -35,7 +33,7 @@ class Main extends Component {
         const HomePageWithId = ({ match }) => {
             return (
                 <HomeDetail
-                    card={this.state.cards.filter(card => card.id === +match.params.homeComponentId)[0]}
+                    card={this.props.cards.filter(card => card.id === +match.params.homeComponentId)[0]}
                 />
             );
         };
@@ -43,7 +41,7 @@ class Main extends Component {
         const WhenWherePage = () => {
             return (
                 <WhenWhere
-                    cards={this.state.cards.filter(card => card.whenwhereComponent)}
+                    cards={this.props.cards.filter(card => card.whenwhereComponent)}
                 />
             );
         };
@@ -51,7 +49,7 @@ class Main extends Component {
         const OurStoryPage = () => {
             return (
                 <OurStory
-                    parallaxes={this.state.parallaxes.filter(parallax => parallax.ourstoryComponent)}
+                    parallaxes={this.props.parallaxes.filter(parallax => parallax.ourstoryComponent)}
                 />
             );
         };
@@ -59,7 +57,7 @@ class Main extends Component {
         const ShopPage = () => {
             return (
                 <Shop
-                    cards={this.state.cards.filter(card => card.shopComponent)}
+                    cards={this.props.cards.filter(card => card.shopComponent)}
                 />
             );
         };
@@ -82,4 +80,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
